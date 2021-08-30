@@ -13,6 +13,18 @@ Technologies:
 Using Visual code with devcontainer for fast work...
 
 
+## Resume
+4 ProJects in Java:
+- Api-Gateway
+- one-msa-springboot
+- hello-thorntail
+- backend
+
+Diagram:
+![Resume](images/Resume.JPG)
+
+# Starting
+
 ## Communication:
 ![alt text](images/Microservices.JPG)
 
@@ -60,6 +72,10 @@ For Run
 
     mvn thorntail:run
 
+Test in port 8280:
+
+    mvn thorntail:run \
+    -Dswarm.network.socket-binding-groups.standard-sockets.port-offset=200
 
 # Kubernetes
 
@@ -81,7 +97,9 @@ Docker build for springboot project
 
     docker build -t rhdevelopers/one-msa-springboot:1.0 .
 
+Docker builf fro ThornTail MicroService
 
+    docker build -t rhdevelopers/hello-microprofile:1.0 .
 
 If you want to test one image:
 
