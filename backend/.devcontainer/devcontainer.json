@@ -1,13 +1,10 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.191.1/containers/java
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.191.1/containers/java-8
 {
-	"name": "Java",
+	"name": "Java 8",
 	"build": {
 		"dockerfile": "Dockerfile",
 		"args": {
-			// Update the VARIANT arg to pick a Java version: 11, 16
-			"VARIANT": "11",
-			// Options
 			"INSTALL_MAVEN": "true",
 			"INSTALL_GRADLE": "true",
 			"NODE_VERSION": "none"
@@ -15,8 +12,14 @@
 	},
 
 	// Set *default* container specific settings.json values on container create.
-	"settings": { 
-		"java.home": "/docker-java-home"
+	"settings": {
+		"java.home": "/docker-java-home",
+		"java.import.gradle.java.home": "/usr/local/sdkman/candidates/java/current",
+		"java.configuration.runtimes": [{
+			"default": true,
+			"name": "JavaSE-1.8",
+			"path": "/usr/local/sdkman/candidates/java/current"
+		}]
 	},
 	
 	// Add the IDs of extensions you want installed when the container is created.

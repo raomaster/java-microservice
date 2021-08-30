@@ -33,6 +33,10 @@
 
         <!-- Jackason Dependency -->
         <jackson-version>2.9.8</jackson-version>
+        
+        <!-- jaeger Dependency -->
+        <jaeger-version>1.5.0</jaeger-version>
+
     </properties>
 
 
@@ -97,7 +101,7 @@
         <dependency>
             <groupId>io.jaegertracing</groupId>
             <artifactId>jaeger-client</artifactId>
-            <version>0.32.0</version>
+            <version>${jaeger-version}</version>
         </dependency>
 
     </dependencies>
